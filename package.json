@@ -17,5 +17,9 @@
   "bugs": {
     "url": "https://github.com/migueld51244/Restaurant_Page_TOP/issues"
   },
-  "homepage": "https://github.com/migueld51244/Restaurant_Page_TOP#readme"
+  "homepage": "https://github.com/migueld51244/Restaurant_Page_TOP#readme",
+  "devDependencies": {
+    "webpack": "^5.109.2",
+    "webpack-cli": "^7.2.2"
+  }
 }
