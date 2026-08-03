@@ -38,7 +38,7 @@ nav {
 }
 
 /* Navbar Buttons Layout & Styling */
-btn {
+.btn {
   position: relative;
   font-family: "Raleway", sans-serif;
   font-size: 2.2rem;
@@ -48,7 +48,7 @@ btn {
   cursor: pointer;
 }
 
-button::after {
+.btn::after {
   position: absolute;
   content: "";
   width: 100%;
@@ -60,7 +60,7 @@ button::after {
   transition: transform 0.3s ease;
 }
 
-button:hover::after {
+.btn:hover::after {
   transform: scale(1, 1);
 }
 
