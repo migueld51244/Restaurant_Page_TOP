@@ -11,12 +11,19 @@
   box-sizing: border-box;
 }
 
+/* Variables */
+:root {
+  --page-base-color: #8a2439;
+  --page-base-tint: #700526;
+  --page-base-shade: #700526;
+}
+
 /* Basic Styling */
 body {
   font-family: "Raleway", sans-serif;
   font-size: 10px;
   height: 100vh;
-  background-color: #8a2439;
+  background-color: var(--page-base-color);
 }
 
 /* Header Layout & Styling */
