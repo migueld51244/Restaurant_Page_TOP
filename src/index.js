@@ -1,1 +1,4 @@
 import "./styles.css";
+import "./home.css"
+import "./menu.css"
+import "./about.css"

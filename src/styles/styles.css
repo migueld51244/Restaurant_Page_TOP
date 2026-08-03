@@ -1,0 +1,70 @@
+/* Imported Raleway font */
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Raleway:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
+
+/* Imported Oswald font */
+@import url("https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap");
+
+/* CSS Reset */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+/* Basic Styling */
+body {
+  font-family: "Raleway", sans-serif;
+  font-size: 10px;
+  height: 100vh;
+  background-color: #8a2439;
+}
+
+/* Header Layout & Styling */
+header {
+  position: relative;
+  height: 15vh;
+  background-color: rgba(3, 0, 0, 0.884);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.25);
+}
+
+/* Navbar Layout & Styling */
+nav {
+  width: 100vh;
+  display: flex;
+  justify-content: space-around;
+}
+
+/* Navbar Buttons Layout & Styling */
+button {
+  position: relative;
+  font-family: "Raleway", sans-serif;
+  font-size: 2.2rem;
+  background-color: transparent;
+  border: none;
+  color: white;
+  cursor: pointer;
+}
+
+button::after {
+  position: absolute;
+  content: "";
+  width: 100%;
+  background-color: rgb(187, 37, 40);
+  height: 0.2rem;
+  left: 0;
+  bottom: 0;
+  transform: scale(0, 1);
+  transition: transform 0.3s ease;
+}
+
+button:hover::after {
+  transform: scale(1, 1);
+}
+
+/* Content Layout & Styling */
+#content {
+  height: calc(100vh - 20vh);
+}
