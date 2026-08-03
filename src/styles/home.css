@@ -1,0 +1,121 @@
+.container {
+  background-image: url(../assets/images/home-section-wallpaper.jpg);
+  height: inherit;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+/* .text-container {
+  position: relative;
+} */
+
+.head-text-container {
+  position: absolute;
+  width: 35rem;
+  top: 10rem;
+  left: 12rem;
+}
+
+.home-title {
+  font-family: "Oswald", sans-serif;
+  color: white;
+  font-size: 5rem;
+  letter-spacing: 0.2rem;
+  font-weight: 900;
+}
+
+.home-text {
+  color: white;
+  margin-top: 2.2rem;
+  font-size: 1.2rem;
+  font-weight: 500;
+}
+
+/* Buttons Section */
+.buttons-container {
+  display: flex;
+  gap: 1.6rem;
+  justify-content: flex-start;
+  margin-top: 2rem;
+  height: auto;
+}
+
+button {
+  font-family: 'Raleway', sans-serif;
+  font-size: 1.5rem;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 1rem 2.5rem;
+  border-radius: 20px;
+}
+/* -- View Menu Button --*/
+.view-menu-btn {
+  background-color: #700526;
+  color: white;
+  border: 2px solid #700526;
+  transition: 0.3s ease;
+}
+
+.view-menu-btn:hover {
+  background-color: #8c0730;
+  border-color: #8c0730;
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(112, 5, 38, 0.5);
+}
+
+.view-menu-btn:active {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 10px rgba(112, 5, 38, 0.3);
+}
+/* -- About Us Button --*/
+.about-us-btn {
+  border: 2px solid white;
+  transition: 0.3s ease;
+}
+
+.about-us-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(87, 68, 74, 0.5);
+}
+
+.about-us-btn:active {
+  transform: translateY(-1px);
+  box-shadow: 0 8px 20px rgba(87, 68, 74, 0.3);
+}
+
+
+.side-container {
+  position: absolute;
+  left: 70rem;
+}
+
+.side-img {
+  /* position: absolute; */
+  height: 45rem;
+  /* left: 70rem; */
+}
+
+.stars-img {
+  width: 11rem;
+}
+
+.rating-container {
+  position: absolute;
+  top: 47rem;
+  left: 12rem;
+}
+
+.rating-text {
+  color: white;
+  font-weight: 500;
+  font-size: 1.1rem;
+  padding-left: 0.2rem;
+  margin-bottom: 0.5rem;
+}
+
+.announcement-text {
+  color: white;
+  font-size: 1.5rem;
+  text-align: center;
+}
