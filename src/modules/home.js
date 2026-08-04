@@ -74,6 +74,8 @@ const buildHomeSection = () => {
   ratingContainer.appendChild(stars);
 
   content.appendChild(mainDiv);
+
+  return mainDiv;
 };
 
 export default buildHomeSection;
