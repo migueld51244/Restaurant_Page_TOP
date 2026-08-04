@@ -30,4 +30,4 @@ document.querySelector(".about-btn").addEventListener("click", () => {
 });
 
 // Initial Home Page
-// loadPage(buildHomeSection);
+loadPage(buildHomeSection);
