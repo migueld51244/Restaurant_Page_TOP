@@ -15,7 +15,7 @@ const buildHomeSection = () => {
   mainDiv.appendChild(textContainer);
 
   // Create Title
-  const pageTitle = document.createElement("h1");
+  const pageTitle = document.createElement("h2");
   pageTitle.innerText = "it's not just Food, it's an Experience.";
   pageTitle.classList.add("home-title");
   textContainer.appendChild(pageTitle);
