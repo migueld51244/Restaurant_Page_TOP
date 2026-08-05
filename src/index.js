@@ -1,5 +1,6 @@
 // Import JS Modules
 import buildHomeSection from "./modules/home.js";
+import buildMenuSection from "./modules/menu.js";
 
 // Imported CSS Files
 import "./styles/styles.css";
@@ -22,7 +23,7 @@ document.querySelector(".home-btn").addEventListener("click", () => {
 });
 
 document.querySelector(".menu-btn").addEventListener("click", () => {
-  loadPage();
+  loadPage(buildMenuSection);
 });
 
 document.querySelector(".about-btn").addEventListener("click", () => {
