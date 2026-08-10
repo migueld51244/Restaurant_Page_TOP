@@ -1,0 +1,7 @@
+/* About Page Layout */
+.about-container {
+  height: 100%;
+  background-image: url("../assets/images/about-section-wallaper.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
