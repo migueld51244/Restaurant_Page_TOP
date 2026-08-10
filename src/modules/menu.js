@@ -172,7 +172,12 @@ const buildMenuSection = () => {
   dish6Price.innerText = "$9.50";
   dish6.append(dish6Img, dish6Name, dish6Description, dish6Price);
 
+  menuDiv.querySelectorAll("img").forEach(img => img.draggable = false);
+
   return menuDiv;
 };
 
 export default buildMenuSection;
+
+
+// change to array data and build dynamically the dishes
