@@ -1,0 +1,94 @@
+.menu-container {
+  background-image: url("../assets/images/menu-wallpaper-intro.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 100%;
+}
+
+.data-container {
+  display: flex;
+  gap: 5.6rem;
+  flex-direction: column;
+  align-items: center;
+  height: 88vh;
+}
+
+/* Data Container Images*/
+.left-side-img {
+  position: absolute;
+  left: 2rem;
+  width: 22rem;
+  bottom: 0;
+}
+
+.right-side-img {
+  position: absolute;
+  right: 2rem;
+  width: 30rem;
+  bottom: 2.5rem;
+}
+
+.menu-page-title {
+  font-family: "Oswald", sans-serif;
+  color: white;
+  font-size: 5.3rem;
+}
+
+.menu-page-desc {
+  margin-top: 19rem;
+  font-size: 3rem;
+  color: rgb(240, 212, 168);
+  width: 40%;
+  text-align: center;
+  line-height: 8rem;
+}
+
+.food-section {
+  background-image: url(../assets/images/food-background.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 80rem;
+}
+
+.food-section-title {
+  font-family: "Oswald", sans-serif;
+  color: white;
+  width: 100%;
+  font-size: 4rem;
+  text-align: center;
+  margin: auto 0;
+  padding-top: 2rem;
+}
+
+.dishes-container {
+  margin-top: 4.5rem;
+  display: grid;
+  align-items: center;
+  gap: 1rem;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  justify-items: center;
+}
+
+.dish-item {
+  display: flex;
+  gap: 1rem;
+  flex-direction: column;
+}
+
+.dish-image {
+  width: 20rem;
+  height: 20rem;
+}
+
+.dish-name {
+  color: white;
+}
+
+.dish-description {
+  color: white;
+}
+
+.dish-price {
+  color: white;
+}
