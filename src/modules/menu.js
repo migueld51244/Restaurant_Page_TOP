@@ -120,12 +120,10 @@ const buildMenuSection = () => {
     const dishPrice = document.createElement("p");
     dishPrice.classList.add("dish-price");
     dishPrice.innerText = dish.price;
-    dish.append(dishImg, dishName, dishDescription, dishPrice);
+    item.append(dishImg, dishName, dishDescription, dishPrice);
   });
 
   return menuDiv;
 };
 
 export default buildMenuSection;
-
-// change to array data and build dynamically the dishes and add footer
