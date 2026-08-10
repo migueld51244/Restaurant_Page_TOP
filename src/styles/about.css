@@ -13,3 +13,20 @@
   font-family: 'Oswald', sans-serif;
   font-size: 5.3rem;
 }
+
+/* About Us Card */
+.about-us-card {
+  background-color: rgba(203, 176, 135, 0.535);
+}
+
+/* Restaurant info container */
+.about-our-restaurant-container {
+  color: wheat;
+}
+
+/* Restaurant details */
+.compromise-container {
+  color: wheat;
+}
+
+/* Restaurant info /*
