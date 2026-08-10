@@ -7,10 +7,13 @@
 
 .data-container {
   display: flex;
+  position: relative;
+  z-index: 1;
   gap: 5.6rem;
   flex-direction: column;
   align-items: center;
   height: 88vh;
+  box-shadow: 0px 15px 30px rgba(0,0,0,0.6);
 }
 
 /* Data Container Images*/
@@ -48,6 +51,7 @@
   background-size: cover;
   background-repeat: no-repeat;
   height: 120rem;
+  position: relative;
 }
 
 .food-section-title {
@@ -109,4 +113,14 @@
   color: white;
   font-weight: 900;
   font-size: 2rem;
+}
+
+.footer {
+  color: white;
+  position: absolute;
+  bottom: 0.3rem;
+  font-size: 1.1rem;
+  font-weight: 500;
+  width: 100%;
+  text-align: center;
 }

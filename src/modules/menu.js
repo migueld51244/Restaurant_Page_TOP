@@ -98,7 +98,6 @@ const buildMenuSection = () => {
   foodContainer.appendChild(dishesContainer);
 
   // Container for each dish
-  // Dish 1
   dishesData.forEach((dish) => {
     const item = document.createElement("div");
     item.classList.add("dish-item");
@@ -111,8 +110,8 @@ const buildMenuSection = () => {
 
     const dishName = document.createElement("h4");
     dishName.classList.add("dish-name");
-    dishName.innerText = dish.name
-    ;
+    dishName.innerText = dish.name;
+
     const dishDescription = document.createElement("p");
     dishDescription.classList.add("dish-description");
     dishDescription.innerText = dish.desc;
@@ -122,6 +121,13 @@ const buildMenuSection = () => {
     dishPrice.innerText = dish.price;
     item.append(dishImg, dishName, dishDescription, dishPrice);
   });
+
+  // Section footer
+  const footer = document.createElement("p");
+  footer.classList.add("footer");
+  footer.innerText = "Obsidian Plates Restaurant - 2026";
+
+  foodContainer.appendChild(footer);
 
   return menuDiv;
 };
