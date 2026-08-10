@@ -5,3 +5,11 @@
   background-size: cover;
   background-repeat: no-repeat;
 }
+
+/* Page Title */
+.about-page-title {
+  text-align: center;
+  color: white;
+  font-family: 'Oswald', sans-serif;
+  font-size: 5.3rem;
+}
