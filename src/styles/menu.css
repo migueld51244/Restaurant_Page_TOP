@@ -1,9 +1,12 @@
+/* Menu Page Layout */
 .menu-container {
   background-image: url("../assets/images/menu-wallpaper-intro.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   height: 100%;
 }
+
+/* First Section Layout */
 
 .data-container {
   display: flex;
@@ -13,10 +16,10 @@
   flex-direction: column;
   align-items: center;
   height: 88vh;
-  box-shadow: 0px 15px 30px rgba(0,0,0,0.6);
+  box-shadow: 0px 15px 30px rgba(0, 0, 0, 0.6);
 }
 
-/* Data Container Images*/
+/* Data Container Images */
 .left-side-img {
   position: absolute;
   left: 2rem;
@@ -30,6 +33,8 @@
   width: 30rem;
   bottom: 2.5rem;
 }
+
+/* Menu Page Text */
 
 .menu-page-title {
   font-family: "Oswald", sans-serif;
@@ -45,6 +50,8 @@
   text-align: center;
   line-height: 8rem;
 }
+
+/* Second panel layout & title */
 
 .food-section {
   background-image: url(../assets/images/food-background.jpg);
@@ -64,6 +71,8 @@
   padding-top: 2rem;
 }
 
+/* Dishes grid */
+
 .dishes-container {
   max-width: 100rem;
   margin-top: 4.5rem;
@@ -76,6 +85,8 @@
   grid-template-rows: repeat(2, 1fr);
   justify-content: center;
 }
+
+/* Dish Items */
 
 .dish-item {
   justify-self: center;
@@ -114,6 +125,8 @@
   font-weight: 900;
   font-size: 2rem;
 }
+
+/* Footer */
 
 .footer {
   color: white;
