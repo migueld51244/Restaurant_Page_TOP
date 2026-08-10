@@ -3,10 +3,6 @@ import sideBarImage from "../assets/images/side-home-image.png";
 import starImage from "../assets/images/5-star.png";
 
 const buildHomeSection = () => {
-  // Clear Section
-  const content = document.querySelector("#content");
-  content.innerHTML = "";
-
   // Generate Section
   const mainDiv = document.createElement("div");
   mainDiv.classList = "container";
