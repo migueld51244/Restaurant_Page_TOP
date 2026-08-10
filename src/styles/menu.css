@@ -47,7 +47,7 @@
   background-image: url(../assets/images/food-background.jpg);
   background-size: cover;
   background-repeat: no-repeat;
-  height: 80rem;
+  height: 120rem;
 }
 
 .food-section-title {
@@ -61,34 +61,52 @@
 }
 
 .dishes-container {
+  max-width: 100rem;
   margin-top: 4.5rem;
+  margin-left: auto;
+  margin-right: auto;
   display: grid;
   align-items: center;
-  gap: 1rem;
+  gap: 3rem;
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: repeat(2, 1fr);
-  justify-items: center;
+  justify-content: center;
 }
 
 .dish-item {
+  justify-self: center;
   display: flex;
   gap: 1rem;
   flex-direction: column;
+  padding: 2rem;
+  padding-bottom: 12rem;
+  background-color: rgba(64, 67, 66, 0.658);
+  border-radius: 20px;
 }
 
 .dish-image {
+  margin-left: auto;
+  margin-right: auto;
   width: 20rem;
   height: 20rem;
 }
 
 .dish-name {
   color: white;
+  text-align: center;
+  font-size: 1.5rem;
 }
 
 .dish-description {
-  color: white;
+  color: rgb(254, 254, 254);
+  width: 30rem;
+  font-size: 1.2rem;
+  font-weight: 400;
+  line-height: 1.5;
 }
 
 .dish-price {
   color: white;
+  font-weight: 900;
+  font-size: 2rem;
 }
