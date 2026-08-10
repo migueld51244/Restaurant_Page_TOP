@@ -8,6 +8,46 @@ import foodImage6 from "../assets/images/food-dishes/food-6.jpg";
 import leftSidebarImg from "../assets/images/menu-section-left-panel-img.png";
 import rightSidebarImg from "../assets/images/menu-section-right-panel-img.png";
 
+// Dishes data
+const dishesData = [
+  {
+    img: foodImage1,
+    name: "Asparagus & Parmesan Spring Salad",
+    desc: "A light and crisp salad featuring fresh mixed greens, roasted asparagus spears, and generous shavings of aged Parmesan cheese, lightly dressed with a lemon vinaigrette.",
+    price: "$12.50",
+  },
+  {
+    img: foodImage2,
+    name: "Herb-Roasted Salmon with Quinoa",
+    desc: "A perfectly flaky, herb-crusted salmon fillet served over a bed of fluffy, nutty quinoa. Accompanied by tender steamed broccoli and topped with toasted sliced almonds.",
+    price: "$23.99",
+  },
+  {
+    img: foodImage3,
+    name: "Sweet Potato & Wild Rice Power Bowl",
+    desc: "A hearty, plant-based bowl featuring a mix of wild and brown rice, topped with savory roasted sweet potatoes, hearty beans or mushrooms, and a fresh garnish of cilantro.",
+    price: "$14.95",
+  },
+  {
+    img: foodImage4,
+    name: "Harvest Chicken & Veggie Plate",
+    desc: "Tender, oven-baked chicken pieces served alongside colorful roasted sweet potatoes and broccoli florets, finished with a sprinkle of dried cranberries for a touch of tart sweetness.",
+    price: "$18.79",
+  },
+  {
+    img: foodImage5,
+    name: "Mediterranean Zucchini Ribbon Salad",
+    desc: "A vibrant, low-carb dish consisting of grilled zucchini ribbons, roasted cherry tomatoes, and sautéed onions, all beautifully garnished with fresh basil leaves.",
+    price: "$13.75",
+  },
+  {
+    img: foodImage6,
+    name: "Rustic Roasted Potato Wedges",
+    desc: "Golden, crispy roasted potato wedges tossed with blistered cherry tomatoes, thinly sliced red onion rings, and aromatic herbs. Perfect as a hearty side or a shareable appetizer.",
+    price: "$9.50",
+  },
+];
+
 const buildMenuSection = () => {
   const menuDiv = document.createElement("div");
   menuDiv.classList.add("menu-container");
@@ -134,7 +174,7 @@ const buildMenuSection = () => {
   dish4Price.innerText = "$18.79";
   dish4.append(dish4Img, dish4Name, dish4Description, dish4Price);
 
-    // Dish 5
+  // Dish 5
   const dish5 = document.createElement("div");
   dish5.classList.add("dish-item");
   dishesContainer.appendChild(dish5);
@@ -153,7 +193,7 @@ const buildMenuSection = () => {
   dish5Price.innerText = "$13.75";
   dish5.append(dish5Img, dish5Name, dish5Description, dish5Price);
 
-    // Dish 6
+  // Dish 6
   const dish6 = document.createElement("div");
   dish6.classList.add("dish-item");
   dishesContainer.appendChild(dish6);
@@ -172,12 +212,11 @@ const buildMenuSection = () => {
   dish6Price.innerText = "$9.50";
   dish6.append(dish6Img, dish6Name, dish6Description, dish6Price);
 
-  menuDiv.querySelectorAll("img").forEach(img => img.draggable = false);
+  menuDiv.querySelectorAll("img").forEach((img) => (img.draggable = false));
 
   return menuDiv;
 };
 
 export default buildMenuSection;
 
-
-// change to array data and build dynamically the dishes
+// change to array data and build dynamically the dishes and add footer
