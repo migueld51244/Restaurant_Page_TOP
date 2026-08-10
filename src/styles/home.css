@@ -1,3 +1,4 @@
+/* Page Main Layout */
 .container {
   background-image: url(../assets/images/home-section-wallpaper.jpg);
   height: inherit;
@@ -5,17 +6,14 @@
   background-repeat: no-repeat;
 }
 
-/* .text-container {
-  position: relative;
-} */
-
+/* Main data container */
 .head-text-container {
   position: absolute;
   width: 35rem;
   top: 10rem;
   left: 12rem;
 }
-
+/* -- Main data container title --*/
 .home-title {
   font-family: "Oswald", sans-serif;
   color: white;
@@ -23,6 +21,8 @@
   letter-spacing: 0.2rem;
   font-weight: 900;
 }
+
+/* -- Main data container description --*/
 
 .home-text {
   color: white;
@@ -84,21 +84,24 @@ button {
   box-shadow: 0 8px 20px rgba(87, 68, 74, 0.3);
 }
 
+/* Right Panel */
 
 .side-container {
   position: absolute;
   left: 70rem;
 }
 
+/* -- Right Panel Images -- */
+
 .side-img {
-  /* position: absolute; */
   height: 45rem;
-  /* left: 70rem; */
 }
 
 .stars-img {
   width: 11rem;
 }
+
+/* Right Panel Rating Container & Text */
 
 .rating-container {
   position: absolute;
