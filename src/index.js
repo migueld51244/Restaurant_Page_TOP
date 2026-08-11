@@ -36,10 +36,11 @@ document.querySelector(".about-btn").addEventListener("click", () => {
 loadPage(buildHomeSection);
 
 // Home page buttons event listeners
-document.querySelector(".view-menu-btn").addEventListener("click", () => {
-  loadPage(buildMenuSection);
-});
-
-document.querySelector(".about-us-btn").addEventListener("click", () => {
-  loadPage(buildAboutSection);
-});
+content.addEventListener("click", e => {
+  if(e.target.matches(".view-menu-btn")) {
+    loadPage(buildMenuSection);
+  }
+  if(e.target.matches(".about-us-btn")) {
+    loadPage(buildAboutSection);
+  }
+})
