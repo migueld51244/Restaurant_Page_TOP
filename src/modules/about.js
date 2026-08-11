@@ -20,19 +20,19 @@ const aboutData = [
 ];
 
 const buildAboutSection = () => {
-  const aboutContainer = document.createElement("div");
-  aboutContainer.classList.add("about-container");
+  const aboutDiv = document.createElement("div");
+  aboutDiv.classList.add("about-container");
 
   // About section title
   const aboutPageTitle = document.createElement("h2");
   aboutPageTitle.textContent = "About Us";
   aboutPageTitle.classList.add("about-page-title");
-  aboutContainer.appendChild(aboutPageTitle);
+  aboutDiv.appendChild(aboutPageTitle);
 
   // About Us Card
   const card = document.createElement("article");
   card.classList.add("about-us-card");
-  aboutContainer.appendChild(card);
+  aboutDiv.appendChild(card);
 
   // Our Restaurant
   const restaurantDetails = document.createElement("div");
@@ -114,7 +114,7 @@ const buildAboutSection = () => {
 
   card.appendChild(restaurantDetails);
 
-  return aboutContainer;
+  return aboutDiv;
 };
 
 export default buildAboutSection;
