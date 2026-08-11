@@ -7,71 +7,68 @@ import { createEl } from "../utils/dom.js";
 
 const buildHomeSection = () => {
   // Generate Section
-  const mainDiv = document.createElement("div");
-  mainDiv.classList = "container";
-  const textContainer = document.createElement("div");
-  textContainer.classList.add("head-text-container");
+  const mainDiv = createEl("div", "container");
+  const textContainer = createEl("div", "head-text-container");
   mainDiv.appendChild(textContainer);
 
   // Create Title
-  const pageTitle = document.createElement("h2");
-  pageTitle.textContent = "it's not just Food, it's an Experience.";
-  pageTitle.classList.add("home-title");
+  const pageTitle = createEl(
+    "h2",
+    "home-title",
+    "it's not just Food, it's an Experience.",
+  );
   textContainer.appendChild(pageTitle);
 
   // Create description text
-  const pageText = document.createElement("p");
-  pageText.textContent =
-    "Come taste fresh plates made with love, share happy moments with friends, and enjoy a warm space that feels like home.";
-  pageText.classList.add("home-text");
+  const pageText = createEl(
+    "p",
+    "home-text",
+    "Come taste fresh plates made with love, share happy moments with friends, and enjoy a warm space that feels like home.",
+  );
   textContainer.appendChild(pageText);
 
   // Create Buttons
-  const viewMenuBtn = document.createElement("button");
-  const aboutUsBtn = document.createElement("button");
-  viewMenuBtn.classList.add("view-menu-btn");
-  aboutUsBtn.classList.add("about-us-btn");
-  viewMenuBtn.textContent = "View Menu";
-  aboutUsBtn.textContent = "About Us";
-  const buttonsContainer = document.createElement("div");
-  buttonsContainer.classList.add("buttons-container");
+  const viewMenuBtn = createEl("button", "view-menu-btn", "View Menu");
+  const aboutUsBtn = createEl("button", "about-us-btn", "About Us");
+  const buttonsContainer = createEl("div", "buttons-container");
   textContainer.appendChild(buttonsContainer);
   buttonsContainer.append(viewMenuBtn, aboutUsBtn);
 
   // Create Rating container
-  const ratingContainer = document.createElement("div");
-  ratingContainer.classList.add("rating-container");
+  const ratingContainer = createEl("div", "rating-container");
   mainDiv.appendChild(ratingContainer);
 
   // Rating Text
-  const ratingText = document.createElement("p");
-  ratingText.classList.add("rating-text");
-  ratingText.textContent = "Rated 5 stars on TripAdvisor";
+  const ratingText = createEl(
+    "p",
+    "rating-text",
+    "Rated 5 stars on TripAdvisor",
+  );
   ratingContainer.appendChild(ratingText);
 
   // Side Container
-  const sideContainer = document.createElement("aside");
-  sideContainer.classList.add("side-container");
+  const sideContainer = createEl("aside", "side-container");
   mainDiv.appendChild(sideContainer);
 
   // Side Image Creation
-  const sideImage = document.createElement("img");
-  sideImage.classList.add("side-img");
-  sideImage.alt = "A seared steak topped with fresh herbs and peppercorns, served with a dark glaze on a matte black plate.";
+  const sideImage = createEl("img", "side-img");
+  sideImage.alt =
+    "A seared steak topped with fresh herbs and peppercorns, served with a dark glaze on a matte black plate.";
   sideImage.src = sideBarImage;
   sideContainer.appendChild(sideImage);
 
   // Announcement Text
-  const announcement = document.createElement("p");
-  announcement.classList.add("announcement-text");
-  announcement.textContent = "✨ Open for Weekend Brunch | 11 AM - 3 PM";
+  const announcement = createEl(
+    "p",
+    "announcement-text",
+    "✨ Open for Weekend Brunch | 11 AM - 3 PM",
+  );
   sideContainer.appendChild(announcement);
 
   // Star Image Creation
-  const stars = document.createElement("img");
+  const stars = createEl("img", "stars-img");
   stars.src = starImage;
   stars.alt = "A yellow 5-star icon";
-  stars.classList.add("stars-img");
   ratingContainer.appendChild(stars);
 
   return mainDiv;

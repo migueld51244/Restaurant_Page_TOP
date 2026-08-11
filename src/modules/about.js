@@ -20,92 +20,90 @@ const aboutData = [
       "Together with our front-of-house team, they ensure that every detail on your plate is sharp, refined, and unforgettable.",
     ],
   },
+  {
+    contacts: [
+      "789 Volcanic Avenue, Suite 100, Downtown Financial District",
+      "+1 (555) 627-4342",
+      "reservations@obsidianplates.com",
+    ],
+  },
+  {
+    schedules: [
+      "Monday - Thursday: 5:00 PM - 10:30 PM",
+      "Friday - Saturday: 5:00 PM - 11:30 PM",
+      "Sunday: Closed (For private events)",
+    ],
+  },
+  {
+    footerAlt:
+      "A dark, textured banner featuring the words 'OBSIDIAN PLATES RESTAURANT' in elegant gold lettering. Centered above the text is a matching gold logo depicting a stylized, geometric plate next to a fork and knife.",
+  },
 ];
 
 const buildAboutSection = () => {
-  const aboutDiv = document.createElement("div");
-  aboutDiv.classList.add("about-container");
+  const aboutDiv = createEl("div", "about-container");
 
   // About section title
-  const aboutPageTitle = document.createElement("h2");
-  aboutPageTitle.textContent = "About Us";
-  aboutPageTitle.classList.add("about-page-title");
+  const aboutPageTitle = createEl("h2", "about-page-title", "About Us");
   aboutDiv.appendChild(aboutPageTitle);
 
   // About Us Card
-  const card = document.createElement("article");
-  card.classList.add("about-us-card");
+  const card = createEl("article", "about-us-card");
   aboutDiv.appendChild(card);
 
   // Our Restaurant
-  const restaurantDetails = document.createElement("div");
-  restaurantDetails.classList.add("about-our-restaurant-container");
+  const restaurantDetails = createEl("div", "about-our-restaurant-container");
 
-  /* Our Compromise */
-  const compromiseContainer = document.createElement("div");
-  compromiseContainer.classList.add("compromise-container");
-  const compromiseHeading = document.createElement("h3");
-  compromiseHeading.textContent = "Our Compromise";
+  // Our Compromise
+  const compromiseContainer = createEl("div", "compromise-container");
+  const compromiseHeading = createEl("h3", null, "Our Compromise");
   const compromiseFrag = document.createDocumentFragment();
-  aboutData[0].compromiseText.forEach(text => {
-    const p = document.createElement("p");
-    p.textContent = text;
-    compromiseFrag.appendChild(p)
-  })
+  aboutData[0].compromiseText.forEach((text) => {
+    const p = createEl("p", null, text);
+    compromiseFrag.appendChild(p);
+  });
   compromiseContainer.append(compromiseHeading, compromiseFrag);
 
-  /* Our team */
-  const teamContainer = document.createElement("div");
-  teamContainer.classList.add("team-container");
-  const teamHeading = document.createElement("h3");
-  teamHeading.textContent = "The Artisans of Obsidian";
+  // Our team
+  const teamContainer = createEl("div", "team-container");
+  const teamHeading = createEl("h3", null, "The Artisans of Obsidian");
   const teamFrag = document.createDocumentFragment();
-  aboutData[1].teamText.forEach(text => {
-    const p = document.createElement("p");
-    p.textContent = text;
-    teamFrag.appendChild(p)
-  })
+  aboutData[1].teamText.forEach((text) => {
+    const p = createEl("p", null, text);
+    teamFrag.appendChild(p);
+  });
   teamContainer.append(teamHeading, teamFrag);
 
   // Contacts
-  const contactsContainer = document.createElement("div");
-  contactsContainer.classList.add("contacts-container");
-  const contactsHeading = document.createElement("h3");
-  contactsHeading.textContent = "How to reach us";
-  const contacts = document.createElement("ul");
+  const contactsContainer = createEl("div", "contacts-container");
+  const contactsHeading = createEl("h3", null, "How to reach us");
+  const contacts = createEl("ul");
   // Contact information
-  const address = document.createElement("li");
-  address.textContent =
-    "789 Volcanic Avenue, Suite 100, Downtown Financial District";
-  const phone = document.createElement("li");
-  phone.textContent = "+1 (555) 627-4342 ";
-  const email = document.createElement("li");
-  email.textContent = "reservations@obsidianplates.com";
-  contacts.append(address, phone, email);
+  const contactsFrag = document.createDocumentFragment();
+  aboutData[2].contacts.forEach((info) => {
+    const el = createEl("li", null, info);
+    contactsFrag.appendChild(el);
+  });
+  contacts.append(contactsFrag);
   contactsContainer.append(contactsHeading, contacts);
 
   // Schedule
-  const scheduleContainer = document.createElement("div");
-  scheduleContainer.classList.add("schedule-container");
-  const scheduleHeading = document.createElement("h3");
-  scheduleHeading.textContent = "Business Hours";
-  const scheduleHours = document.createElement("ul");
-  const schedule1 = document.createElement("li");
-  schedule1.textContent = "Monday - Thursday: 5:00 PM - 10:30 PM";
-  const schedule2 = document.createElement("li");
-  schedule2.textContent = "Friday - Saturday: 5:00 PM - 11:30 PM";
-  const schedule3 = document.createElement("li");
-  schedule3.textContent = "Sunday: Closed (For private events)";
-  scheduleHours.append(schedule1, schedule2, schedule3);
+  const scheduleContainer = createEl("div", "schedule-container");
+  const scheduleHeading = createEl("h3", null, "Business Hours");
+  const scheduleHours = createEl("ul");
+  const scheduleFrag = document.createDocumentFragment();
+  aboutData[3].schedules.forEach((schedule) => {
+    const el = createEl("li", null, schedule);
+    scheduleFrag.appendChild(el);
+  });
+  scheduleHours.append(scheduleFrag);
   scheduleContainer.append(scheduleHeading, scheduleHours);
 
   // Footer
-  const footerContainer = document.createElement("footer");
-  footerContainer.classList.add("footer-container");
-  const footer = document.createElement("img");
-  footer.classList.add("card-footer-img");
+  const footerContainer = createEl("footer", "footer-container");
+  const footer = createEl("img", "card-footer-img");
   footer.src = footerImage;
-  footer.alt = "A dark, textured banner featuring the words 'OBSIDIAN PLATES RESTAURANT' in elegant gold lettering. Centered above the text is a matching gold logo depicting a stylized, geometric plate next to a fork and knife.";
+  footer.alt = aboutData[4].footerAlt;
   footerContainer.appendChild(footer);
 
   restaurantDetails.append(

@@ -12,131 +12,120 @@ import rightSidebarImg from "../assets/images/menu-section-right-panel-img.png";
 import { createEl } from "../utils/dom.js";
 
 // Dishes data
-const dishesData = [
+const menuData = [
+  [
+    {
+      img: foodImage1,
+      alt: "Top-down view of a white plate on a white surface, holding a fresh green salad made of roasted asparagus spears, mixed greens, and large parmesan cheese shavings.",
+      name: "Asparagus & Parmesan Spring Salad",
+      desc: "A light and crisp salad featuring fresh mixed greens, roasted asparagus spears, and generous shavings of aged Parmesan cheese, lightly dressed with a lemon vinaigrette.",
+      price: "$12.50",
+    },
+    {
+      img: foodImage2,
+      alt: "Top-down view of a white plate set against a bright orange background, featuring a cooked, herb-topped salmon fillet resting on a bed of quinoa, served with steamed broccoli and sliced almonds. A silver fork rests to the right of the plate.",
+      name: "Herb-Roasted Salmon with Quinoa",
+      desc: "A perfectly flaky, herb-crusted salmon fillet served over a bed of fluffy, nutty quinoa. Accompanied by tender steamed broccoli and topped with toasted sliced almonds.",
+      price: "$23.99",
+    },
+    {
+      img: foodImage3,
+      alt: "Top-down view of a white bowl resting on a blue kitchen towel, containing a hearty mix of dark wild rice, white rice, roasted sweet potato chunks, and a garnish of fresh cilantro.",
+      name: "Sweet Potato & Wild Rice Power Bowl",
+      desc: "A hearty, plant-based bowl featuring a mix of wild and brown rice, topped with savory roasted sweet potatoes, hearty beans or mushrooms, and a fresh garnish of cilantro.",
+      price: "$14.95",
+    },
+    {
+      img: foodImage4,
+      alt: "Top-down view of a white plate on a vibrant green background, showing cooked chicken pieces alongside broccoli florets, roasted sweet potatoes, and dried cranberries. A fork is placed on the right side of the plate.",
+      name: "Harvest Chicken & Veggie Plate",
+      desc: "Tender, oven-baked chicken pieces served alongside colorful roasted sweet potatoes and broccoli florets, finished with a sprinkle of dried cranberries for a touch of tart sweetness.",
+      price: "$18.79",
+    },
+    {
+      img: foodImage5,
+      alt: "Top-down view of a rustic blue speckled bowl filled with folded, cooked zucchini ribbons, roasted red tomatoes, and sautéed onions, topped with fresh green basil leaves.",
+      name: "Mediterranean Zucchini Ribbon Salad",
+      desc: "A vibrant, low-carb dish consisting of grilled zucchini ribbons, roasted cherry tomatoes, and sautéed onions, all beautifully garnished with fresh basil leaves.",
+      price: "$13.75",
+    },
+    {
+      img: foodImage6,
+      alt: "Top-down view of a dark gray plate on a textured, dark background, piled with seasoned golden roasted potato wedges, blistered cherry tomatoes, and thin red onion rings.",
+      name: "Rustic Roasted Potato Wedges",
+      desc: "Golden, crispy roasted potato wedges tossed with blistered cherry tomatoes, thinly sliced red onion rings, and aromatic herbs. Perfect as a hearty side or a shareable appetizer.",
+      price: "$9.50",
+    },
+  ],
   {
-    img: foodImage1,
-    alt: "Top-down view of a white plate on a white surface, holding a fresh green salad made of roasted asparagus spears, mixed greens, and large parmesan cheese shavings.",
-    name: "Asparagus & Parmesan Spring Salad",
-    desc: "A light and crisp salad featuring fresh mixed greens, roasted asparagus spears, and generous shavings of aged Parmesan cheese, lightly dressed with a lemon vinaigrette.",
-    price: "$12.50",
-  },
-  {
-    img: foodImage2,
-    alt: "Top-down view of a white plate set against a bright orange background, featuring a cooked, herb-topped salmon fillet resting on a bed of quinoa, served with steamed broccoli and sliced almonds. A silver fork rests to the right of the plate.",
-    name: "Herb-Roasted Salmon with Quinoa",
-    desc: "A perfectly flaky, herb-crusted salmon fillet served over a bed of fluffy, nutty quinoa. Accompanied by tender steamed broccoli and topped with toasted sliced almonds.",
-    price: "$23.99",
-  },
-  {
-    img: foodImage3,
-    alt: "Top-down view of a white bowl resting on a blue kitchen towel, containing a hearty mix of dark wild rice, white rice, roasted sweet potato chunks, and a garnish of fresh cilantro.",
-    name: "Sweet Potato & Wild Rice Power Bowl",
-    desc: "A hearty, plant-based bowl featuring a mix of wild and brown rice, topped with savory roasted sweet potatoes, hearty beans or mushrooms, and a fresh garnish of cilantro.",
-    price: "$14.95",
-  },
-  {
-    img: foodImage4,
-    alt: "Top-down view of a white plate on a vibrant green background, showing cooked chicken pieces alongside broccoli florets, roasted sweet potatoes, and dried cranberries. A fork is placed on the right side of the plate.",
-    name: "Harvest Chicken & Veggie Plate",
-    desc: "Tender, oven-baked chicken pieces served alongside colorful roasted sweet potatoes and broccoli florets, finished with a sprinkle of dried cranberries for a touch of tart sweetness.",
-    price: "$18.79",
-  },
-  {
-    img: foodImage5,
-    alt: "Top-down view of a rustic blue speckled bowl filled with folded, cooked zucchini ribbons, roasted red tomatoes, and sautéed onions, topped with fresh green basil leaves.",
-    name: "Mediterranean Zucchini Ribbon Salad",
-    desc: "A vibrant, low-carb dish consisting of grilled zucchini ribbons, roasted cherry tomatoes, and sautéed onions, all beautifully garnished with fresh basil leaves.",
-    price: "$13.75",
-  },
-  {
-    img: foodImage6,
-    alt: "Top-down view of a dark gray plate on a textured, dark background, piled with seasoned golden roasted potato wedges, blistered cherry tomatoes, and thin red onion rings.",
-    name: "Rustic Roasted Potato Wedges",
-    desc: "Golden, crispy roasted potato wedges tossed with blistered cherry tomatoes, thinly sliced red onion rings, and aromatic herbs. Perfect as a hearty side or a shareable appetizer.",
-    price: "$9.50",
+    rightSidebarImgAlt:
+      "Top-down view of a white plate featuring a thick, grilled steak with prominent grill marks and a sprinkle of fresh herbs. It is served alongside a vibrant green arugula salad, roasted cherry tomatoes, and a charred lemon slice, all set against a solid black background.",
+    leftSidebarImgAlt:
+      "A close-up shot of a fresh, bright green sprig of parsley resting delicately on the tines of a black plastic fork, set against a dark background.",
   },
 ];
 
 const buildMenuSection = () => {
-  const menuDiv = document.createElement("div");
-  menuDiv.classList.add("menu-container");
+  const menuDiv = createEl("div", "menu-container");
 
   // Data container
-  const dataContainer = document.createElement("div");
-  dataContainer.classList.add("data-container");
+  const dataContainer = createEl("div", "data-container");
   menuDiv.appendChild(dataContainer);
 
   // Section Title
-  const title = document.createElement("h2");
-  title.classList.add("menu-page-title");
-  title.textContent = "Our great menu";
+  const title = createEl("h2", "menu-page-title", "Our great menu");
   dataContainer.appendChild(title);
 
   // Section images
-  const leftImage = document.createElement("img");
+  const leftImage = createEl("img", "left-side-img");
   leftImage.src = leftSidebarImg;
-  leftImage.alt = "A close-up shot of a fresh, bright green sprig of parsley resting delicately on the tines of a black plastic fork, set against a dark background.";
-  leftImage.classList.add("left-side-img");
-  const rightImage = document.createElement("img");
+  leftImage.alt = menuData[1].leftSidebarImgAlt;
+  const rightImage = createEl("img", "right-side-img");
   rightImage.src = rightSidebarImg;
-  rightImage.alt = "Top-down view of a white plate featuring a thick, grilled steak with prominent grill marks and a sprinkle of fresh herbs. It is served alongside a vibrant green arugula salad, roasted cherry tomatoes, and a charred lemon slice, all set against a solid black background.";
-  rightImage.classList.add("right-side-img");
+  rightImage.alt = menuData[1].rightSidebarImgAlt;
 
   dataContainer.append(leftImage, rightImage);
 
   // Section description
-  const description = document.createElement("h3");
-  description.textContent =
-    "Come hungry, leave happy. Check out our favorites below.";
-  description.classList.add("menu-page-desc");
+  const description = createEl(
+    "h3",
+    "menu-page-desc",
+    "Come hungry, leave happy. Check out our favorites below.",
+  );
   dataContainer.appendChild(description);
 
   // Food Section Container
-  const foodContainer = document.createElement("main");
-  foodContainer.classList.add("food-section");
+  const foodContainer = createEl("main", "food-section");
   menuDiv.appendChild(foodContainer);
 
   // Food Section Title
-  const foodTitle = document.createElement("h3");
-  foodTitle.classList.add("food-section-title");
-  foodTitle.textContent = "Tasty dishes";
+  const foodTitle = createEl("h3", "food-section-title", "Tasty dishes");
   foodContainer.appendChild(foodTitle);
 
   // Dishes container
-  const dishesContainer = document.createElement("div");
-  dishesContainer.classList.add("dishes-container");
+  const dishesContainer = createEl("div", "dishes-container");
   foodContainer.appendChild(dishesContainer);
 
   // Container for each dish
-  dishesData.forEach((dish) => {
-    const item = document.createElement("div");
-    item.classList.add("dish-item");
+  menuData[0].forEach((dish) => {
+    const item = createEl("div", "dish-item");
     dishesContainer.appendChild(item);
 
-    const dishImg = document.createElement("img");
-    dishImg.classList.add("dish-image");
+    const dishImg = createEl("img", "dish-image");
     dishImg.src = dish.img;
     dishImg.alt = dish.alt;
     dishImg.draggable = false;
 
-    const dishName = document.createElement("h4");
-    dishName.classList.add("dish-name");
-    dishName.textContent = dish.name;
+    const dishName = createEl("h4", "dish-name", dish.name);
 
-    const dishDescription = document.createElement("p");
-    dishDescription.classList.add("dish-description");
-    dishDescription.textContent = dish.desc;
+    const dishDescription = createEl("p", "dish-description", dish.desc);
 
-    const dishPrice = document.createElement("p");
-    dishPrice.classList.add("dish-price");
-    dishPrice.textContent = dish.price;
+    const dishPrice = createEl("p", "dish-price", dish.price);
     item.append(dishImg, dishName, dishDescription, dishPrice);
   });
 
   // Section footer
-  const footer = document.createElement("p");
-  footer.classList.add("footer");
-  footer.textContent = "Obsidian Plates Restaurant - 2026";
+  const footer = createEl("p", "footer", "Obsidian Plates Restaurant - 2026");
 
   foodContainer.appendChild(footer);
 
