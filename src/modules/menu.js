@@ -66,7 +66,7 @@ const buildMenuSection = () => {
   // Section Title
   const title = document.createElement("h2");
   title.classList.add("menu-page-title");
-  title.innerText = "Our great menu";
+  title.textContent = "Our great menu";
   dataContainer.appendChild(title);
 
   // Section images
@@ -83,7 +83,7 @@ const buildMenuSection = () => {
 
   // Section description
   const description = document.createElement("h3");
-  description.innerText =
+  description.textContent =
     "Come hungry, leave happy. Check out our favorites below.";
   description.classList.add("menu-page-desc");
   dataContainer.appendChild(description);
@@ -96,7 +96,7 @@ const buildMenuSection = () => {
   // Food Section Title
   const foodTitle = document.createElement("h3");
   foodTitle.classList.add("food-section-title");
-  foodTitle.innerText = "Tasty dishes";
+  foodTitle.textContent = "Tasty dishes";
   foodContainer.appendChild(foodTitle);
 
   // Dishes container
@@ -118,22 +118,22 @@ const buildMenuSection = () => {
 
     const dishName = document.createElement("h4");
     dishName.classList.add("dish-name");
-    dishName.innerText = dish.name;
+    dishName.textContent = dish.name;
 
     const dishDescription = document.createElement("p");
     dishDescription.classList.add("dish-description");
-    dishDescription.innerText = dish.desc;
+    dishDescription.textContent = dish.desc;
 
     const dishPrice = document.createElement("p");
     dishPrice.classList.add("dish-price");
-    dishPrice.innerText = dish.price;
+    dishPrice.textContent = dish.price;
     item.append(dishImg, dishName, dishDescription, dishPrice);
   });
 
   // Section footer
   const footer = document.createElement("p");
   footer.classList.add("footer");
-  footer.innerText = "Obsidian Plates Restaurant - 2026";
+  footer.textContent = "Obsidian Plates Restaurant - 2026";
 
   foodContainer.appendChild(footer);
 
