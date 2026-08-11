@@ -69,8 +69,6 @@ const buildHomeSection = () => {
   stars.classList.add("stars-img");
   ratingContainer.appendChild(stars);
 
-  content.appendChild(mainDiv);
-
   return mainDiv;
 };
 
