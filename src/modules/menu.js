@@ -51,7 +51,6 @@ const dishesData = [
 const buildMenuSection = () => {
   const menuDiv = document.createElement("div");
   menuDiv.classList.add("menu-container");
-  document.querySelector("#content").appendChild(menuDiv);
 
   // Data container
   const dataContainer = document.createElement("div");
