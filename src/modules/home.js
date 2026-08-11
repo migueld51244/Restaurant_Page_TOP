@@ -3,7 +3,7 @@ import sideBarImage from "../assets/images/side-home-image.png";
 import starImage from "../assets/images/5-star.png";
 
 // DOM helper function
-import { createEl } from "../utils/dom";
+import { createEl } from "../utils/dom.js";
 
 const buildHomeSection = () => {
   // Generate Section

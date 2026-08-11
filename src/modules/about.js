@@ -2,7 +2,7 @@
 import footerImage from "../assets/images/about-us-card-footer.png";
 
 // DOM helper function
-import { createEl } from "../utils/dom";
+import { createEl } from "../utils/dom.js";
 
 // About Data
 const aboutData = [

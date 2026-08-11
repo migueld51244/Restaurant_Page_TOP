@@ -9,7 +9,7 @@ import leftSidebarImg from "../assets/images/menu-section-left-panel-img.png";
 import rightSidebarImg from "../assets/images/menu-section-right-panel-img.png";
 
 // DOM helper function
-import { createEl } from "../utils/dom";
+import { createEl } from "../utils/dom.js";
 
 // Dishes data
 const dishesData = [
