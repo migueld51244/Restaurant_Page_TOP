@@ -1,10 +1,31 @@
+// Import images
+import footerImage from "../assets/images/about-us-card-footer.png";
+
+// About Data
+const aboutData = [
+  {
+    compromiseText: [
+      "At Obsidian Plates Restaurant, we combine traditional recipes with a modern twist.",
+      "We work directly with local farmers to ensure daily freshness.",
+    ],
+  },
+  {
+    teamText: [
+      "Just like the volcanic stone that inspires our name, our culinary team works with fire, precision, and raw passion.",
+      "Led by Executive Chef Marcus Vance, our kitchen shapes raw, premium ingredients into striking culinary art.",
+      "Alongside him, Head Pastry Chef Elena Rossi crafts delicate desserts that contrast beautifully with our dark, sleek aesthetic.",
+      "Together with our front-of-house team, they ensure that every detail on your plate is sharp, refined, and unforgettable.",
+    ],
+  },
+];
+
 const buildAboutSection = () => {
   const aboutContainer = document.createElement("div");
   aboutContainer.classList.add("about-container");
 
   // About section title
   const aboutPageTitle = document.createElement("h2");
-  aboutPageTitle.innerText = "About Us";
+  aboutPageTitle.textContent = "About Us";
   aboutPageTitle.classList.add("about-page-title");
   aboutContainer.appendChild(aboutPageTitle);
 
@@ -21,52 +42,75 @@ const buildAboutSection = () => {
   const compromiseContainer = document.createElement("div");
   compromiseContainer.classList.add("compromise-container");
   const compromiseHeading = document.createElement("h3");
-  compromiseHeading.innerText = "Our Compromise";
-  const compromiseText = document.createElement("p");
-  compromiseText.innerText =
-    "At Obsidian Plates Restaurant, we combine traditional recipes with a modern twist. We work directly with local farmers to ensure daily freshness.";
-  compromiseContainer.append(compromiseHeading, compromiseText);
+  compromiseHeading.textContent = "Our Compromise";
+  const compromiseFrag = document.createDocumentFragment();
+  aboutData[0].compromiseText.forEach(text => {
+    const p = document.createElement("p");
+    p.textContent = text;
+    compromiseFrag.appendChild(p)
+  })
+  compromiseContainer.append(compromiseHeading, compromiseFrag);
 
   /* Our team */
   const teamContainer = document.createElement("div");
+  teamContainer.classList.add("team-container");
   const teamHeading = document.createElement("h3");
-  teamHeading.innerText = "The Artisans of Obsidian";
-  const teamText = document.createElement("p");
-  teamText.innerText =
-    "Just like the volcanic stone that inspires our name, our culinary team works with fire, precision, and raw passion. Led by Executive Chef Marcus Vance, our kitchen shapes raw, premium ingredients into striking culinary art.Alongside him, Head Pastry Chef Elena Rossi crafts delicate desserts that contrast beautifully with our dark, sleek aesthetic. Together with our front-of-house team, they ensure that every detail on your plate is sharp, refined, and unforgettable.";
-  teamContainer.append(teamHeading, teamText);
+  teamHeading.textContent = "The Artisans of Obsidian";
+  const teamFrag = document.createDocumentFragment();
+  aboutData[1].teamText.forEach(text => {
+    const p = document.createElement("p");
+    p.textContent = text;
+    teamFrag.appendChild(p)
+  })
+  teamContainer.append(teamHeading, teamFrag);
 
   // Contacts
   const contactsContainer = document.createElement("div");
+  contactsContainer.classList.add("contacts-container");
   const contactsHeading = document.createElement("h3");
-  contactsHeading.innerText = "How to reach us";
+  contactsHeading.textContent = "How to reach us";
   const contacts = document.createElement("ul");
   // Contact information
   const address = document.createElement("li");
-  address.innerText =
+  address.textContent =
     "789 Volcanic Avenue, Suite 100, Downtown Financial District";
   const phone = document.createElement("li");
-  phone.innerText = "+1 (555) 627-4342 ";
+  phone.textContent = "+1 (555) 627-4342 ";
   const email = document.createElement("li");
-  email.innerText = "reservations@obsidianplates.com";
+  email.textContent = "reservations@obsidianplates.com";
   contacts.append(address, phone, email);
   contactsContainer.append(contactsHeading, contacts);
 
   // Schedule
   const scheduleContainer = document.createElement("div");
+  scheduleContainer.classList.add("schedule-container");
   const scheduleHeading = document.createElement("h3");
-  scheduleHeading.innerText = "Business Hours";
+  scheduleHeading.textContent = "Business Hours";
   const scheduleHours = document.createElement("ul");
   const schedule1 = document.createElement("li");
-  schedule1.innerText = "Monday - Thursday: 5:00 PM - 10:30 PM";
+  schedule1.textContent = "Monday - Thursday: 5:00 PM - 10:30 PM";
   const schedule2 = document.createElement("li");
-  schedule2.innerText = "Friday - Saturday: 5:00 PM - 11:30 PM";
+  schedule2.textContent = "Friday - Saturday: 5:00 PM - 11:30 PM";
   const schedule3 = document.createElement("li");
-  schedule3.innerText = "Sunday: Closed (For private events)";
-  scheduleHours.append(schedule1, schedule2, schedule3)
-  scheduleContainer.append(scheduleHeading, scheduleHours)
+  schedule3.textContent = "Sunday: Closed (For private events)";
+  scheduleHours.append(schedule1, schedule2, schedule3);
+  scheduleContainer.append(scheduleHeading, scheduleHours);
 
-  restaurantDetails.append(compromiseContainer, teamContainer, contactsContainer, scheduleContainer);
+  // Footer
+  const footerContainer = document.createElement("footer");
+  footerContainer.classList.add("footer-container");
+  const footer = document.createElement("img");
+  footer.classList.add("card-footer-img");
+  footer.src = footerImage;
+  footerContainer.appendChild(footer);
+
+  restaurantDetails.append(
+    compromiseContainer,
+    teamContainer,
+    contactsContainer,
+    scheduleContainer,
+    footerContainer,
+  );
 
   card.appendChild(restaurantDetails);
 

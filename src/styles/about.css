@@ -1,32 +1,99 @@
 /* About Page Layout */
 .about-container {
   height: 100%;
-  background-image: url("../assets/images/about-section-wallaper.jpg");
+  background-image: url("../assets/images/about-section-wallpaper.jpg");
   background-size: cover;
   background-repeat: no-repeat;
+}
+
+/* Utilities */
+ul {
+  list-style-position: inside;
+}
+
+li {
+  font-size: 0.9rem;
+  font-weight: 500;
 }
 
 /* Page Title */
 .about-page-title {
   text-align: center;
   color: white;
-  font-family: 'Oswald', sans-serif;
+  font-family: "Oswald", sans-serif;
   font-size: 5.3rem;
 }
 
 /* About Us Card */
 .about-us-card {
-  background-color: rgba(203, 176, 135, 0.535);
+  position: relative;
+  background-color: rgba(14, 93, 117, 0.535);
+  width: 50rem;
+  margin: 0 auto;
+  margin-top: 1rem;
+  height: 80%;
+  border-radius: 20px;
 }
 
 /* Restaurant info container */
 .about-our-restaurant-container {
-  color: wheat;
+  display: flex;
+  flex-direction: column;
+  color: white;
+  padding: 2rem;
+  gap: 1rem;
+  line-height: 1.4;
+  text-wrap: pretty;
+}
+
+.about-our-restaurant-container h3 {
+  font-size: 1.7rem;
+  font-weight: 700;
+}
+
+.about-our-restaurant-container p {
+  font-size: 0.9rem;
+  font-weight: 500;
 }
 
 /* Restaurant details */
 .compromise-container {
-  color: wheat;
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+}
+
+.team-container {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+}
+
+.contacts-container {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+}
+
+.schedule-container {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+}
+
+/* -- Footer - */
+.footer-container {
+  display: flex;
+  width: 100%;
+  max-height: 15rem;
+  justify-content: center;
+}
+
+.card-footer-img {
+  width: 30%;
+  margin-bottom: 0.7rem;
+  position: absolute;
+  bottom: 0.2rem;
 }
 
 /* Restaurant info */
