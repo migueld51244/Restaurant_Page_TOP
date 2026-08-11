@@ -1,6 +1,6 @@
-export function createEl(element, cls, text) {
-  const element = document.createElement(element);
-  if(cls) element.classList.add(cls);
-  if(text) element.textContent = text;
-  return element;
+export function createEl(el, cls, text) {
+  const element = document.createElement(el);
+  if(cls) el.classList.add(cls);
+  if(text) el.textContent = text;
+  return el;
 }
