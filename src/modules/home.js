@@ -12,13 +12,13 @@ const buildHomeSection = () => {
 
   // Create Title
   const pageTitle = document.createElement("h2");
-  pageTitle.innerText = "it's not just Food, it's an Experience.";
+  pageTitle.textContent = "it's not just Food, it's an Experience.";
   pageTitle.classList.add("home-title");
   textContainer.appendChild(pageTitle);
 
   // Create description text
   const pageText = document.createElement("p");
-  pageText.innerText =
+  pageText.textContent =
     "Come taste fresh plates made with love, share happy moments with friends, and enjoy a warm space that feels like home.";
   pageText.classList.add("home-text");
   textContainer.appendChild(pageText);
@@ -28,8 +28,8 @@ const buildHomeSection = () => {
   const aboutUsBtn = document.createElement("button");
   viewMenuBtn.classList.add("view-menu-btn");
   aboutUsBtn.classList.add("about-us-btn");
-  viewMenuBtn.innerText = "View Menu";
-  aboutUsBtn.innerText = "About Us";
+  viewMenuBtn.textContent = "View Menu";
+  aboutUsBtn.textContent = "About Us";
   const buttonsContainer = document.createElement("div");
   buttonsContainer.classList.add("buttons-container");
   textContainer.appendChild(buttonsContainer);
@@ -43,7 +43,7 @@ const buildHomeSection = () => {
   // Rating Text
   const ratingText = document.createElement("p");
   ratingText.classList.add("rating-text");
-  ratingText.innerText = "Rated 5 stars on TripAdvisor";
+  ratingText.textContent = "Rated 5 stars on TripAdvisor";
   ratingContainer.appendChild(ratingText);
 
   // Side Container
@@ -60,7 +60,7 @@ const buildHomeSection = () => {
   // Announcement Text
   const announcement = document.createElement("p");
   announcement.classList.add("announcement-text");
-  announcement.innerText = "✨ Open for Weekend Brunch | 11 AM - 3 PM";
+  announcement.textContent = "✨ Open for Weekend Brunch | 11 AM - 3 PM";
   sideContainer.appendChild(announcement);
 
   // Star Image Creation
