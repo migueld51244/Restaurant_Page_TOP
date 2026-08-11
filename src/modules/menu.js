@@ -70,11 +70,11 @@ const buildMenuSection = () => {
 
   // Data container
   const dataContainer = createEl("div", "data-container");
-  menuDiv.appendChild(dataContainer);
+  menuDiv.append(dataContainer);
 
   // Section Title
   const title = createEl("h2", "menu-page-title", "Our great menu");
-  dataContainer.appendChild(title);
+  dataContainer.append(title);
 
   // Section images
   const leftImage = createEl("img", "left-side-img");
@@ -92,24 +92,24 @@ const buildMenuSection = () => {
     "menu-page-desc",
     "Come hungry, leave happy. Check out our favorites below.",
   );
-  dataContainer.appendChild(description);
+  dataContainer.append(description);
 
   // Food Section Container
   const foodContainer = createEl("main", "food-section");
-  menuDiv.appendChild(foodContainer);
+  menuDiv.append(foodContainer);
 
   // Food Section Title
   const foodTitle = createEl("h3", "food-section-title", "Tasty dishes");
-  foodContainer.appendChild(foodTitle);
+  foodContainer.append(foodTitle);
 
   // Dishes container
   const dishesContainer = createEl("div", "dishes-container");
-  foodContainer.appendChild(dishesContainer);
+  foodContainer.append(dishesContainer);
 
   // Container for each dish
   menuData[0].forEach((dish) => {
     const item = createEl("div", "dish-item");
-    dishesContainer.appendChild(item);
+    dishesContainer.append(item);
 
     const dishImg = createEl("img", "dish-image");
     dishImg.src = dish.img;
@@ -127,7 +127,7 @@ const buildMenuSection = () => {
   // Section footer
   const footer = createEl("p", "footer", "Obsidian Plates Restaurant - 2026");
 
-  foodContainer.appendChild(footer);
+  foodContainer.append(footer);
 
   return menuDiv;
 };

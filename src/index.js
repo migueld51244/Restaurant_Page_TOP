@@ -16,7 +16,7 @@ function loadPage(page) {
   content.replaceChildren();
 
   const pageContent = page();
-  content.appendChild(pageContent);
+  content.append(pageContent);
 }
 
 // Navbar event listeners

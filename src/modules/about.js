@@ -45,11 +45,11 @@ const buildAboutSection = () => {
 
   // About section title
   const aboutPageTitle = createEl("h2", "about-page-title", "About Us");
-  aboutDiv.appendChild(aboutPageTitle);
+  aboutDiv.append(aboutPageTitle);
 
   // About Us Card
   const card = createEl("article", "about-us-card");
-  aboutDiv.appendChild(card);
+  aboutDiv.append(card);
 
   // Our Restaurant
   const restaurantDetails = createEl("div", "about-our-restaurant-container");
@@ -60,7 +60,7 @@ const buildAboutSection = () => {
   const compromiseFrag = document.createDocumentFragment();
   aboutData[0].compromiseText.forEach((text) => {
     const p = createEl("p", null, text);
-    compromiseFrag.appendChild(p);
+    compromiseFrag.append(p);
   });
   compromiseContainer.append(compromiseHeading, compromiseFrag);
 
@@ -70,7 +70,7 @@ const buildAboutSection = () => {
   const teamFrag = document.createDocumentFragment();
   aboutData[1].teamText.forEach((text) => {
     const p = createEl("p", null, text);
-    teamFrag.appendChild(p);
+    teamFrag.append(p);
   });
   teamContainer.append(teamHeading, teamFrag);
 
@@ -82,7 +82,7 @@ const buildAboutSection = () => {
   const contactsFrag = document.createDocumentFragment();
   aboutData[2].contacts.forEach((info) => {
     const el = createEl("li", null, info);
-    contactsFrag.appendChild(el);
+    contactsFrag.append(el);
   });
   contacts.append(contactsFrag);
   contactsContainer.append(contactsHeading, contacts);
@@ -94,7 +94,7 @@ const buildAboutSection = () => {
   const scheduleFrag = document.createDocumentFragment();
   aboutData[3].schedules.forEach((schedule) => {
     const el = createEl("li", null, schedule);
-    scheduleFrag.appendChild(el);
+    scheduleFrag.append(el);
   });
   scheduleHours.append(scheduleFrag);
   scheduleContainer.append(scheduleHeading, scheduleHours);
@@ -104,7 +104,7 @@ const buildAboutSection = () => {
   const footer = createEl("img", "card-footer-img");
   footer.src = footerImage;
   footer.alt = aboutData[4].footerAlt;
-  footerContainer.appendChild(footer);
+  footerContainer.append(footer);
 
   restaurantDetails.append(
     compromiseContainer,
@@ -114,7 +114,7 @@ const buildAboutSection = () => {
     footerContainer,
   );
 
-  card.appendChild(restaurantDetails);
+  card.append(restaurantDetails);
 
   return aboutDiv;
 };

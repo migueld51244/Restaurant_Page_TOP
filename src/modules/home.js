@@ -9,7 +9,7 @@ const buildHomeSection = () => {
   // Generate Section
   const mainDiv = createEl("div", "container");
   const textContainer = createEl("div", "head-text-container");
-  mainDiv.appendChild(textContainer);
+  mainDiv.append(textContainer);
 
   // Create Title
   const pageTitle = createEl(
@@ -17,7 +17,7 @@ const buildHomeSection = () => {
     "home-title",
     "it's not just Food, it's an Experience.",
   );
-  textContainer.appendChild(pageTitle);
+  textContainer.append(pageTitle);
 
   // Create description text
   const pageText = createEl(
@@ -25,18 +25,18 @@ const buildHomeSection = () => {
     "home-text",
     "Come taste fresh plates made with love, share happy moments with friends, and enjoy a warm space that feels like home.",
   );
-  textContainer.appendChild(pageText);
+  textContainer.append(pageText);
 
   // Create Buttons
   const viewMenuBtn = createEl("button", "view-menu-btn", "View Menu");
   const aboutUsBtn = createEl("button", "about-us-btn", "About Us");
   const buttonsContainer = createEl("div", "buttons-container");
-  textContainer.appendChild(buttonsContainer);
+  textContainer.append(buttonsContainer);
   buttonsContainer.append(viewMenuBtn, aboutUsBtn);
 
   // Create Rating container
   const ratingContainer = createEl("div", "rating-container");
-  mainDiv.appendChild(ratingContainer);
+  mainDiv.append(ratingContainer);
 
   // Rating Text
   const ratingText = createEl(
@@ -44,18 +44,18 @@ const buildHomeSection = () => {
     "rating-text",
     "Rated 5 stars on TripAdvisor",
   );
-  ratingContainer.appendChild(ratingText);
+  ratingContainer.append(ratingText);
 
   // Side Container
   const sideContainer = createEl("aside", "side-container");
-  mainDiv.appendChild(sideContainer);
+  mainDiv.append(sideContainer);
 
   // Side Image Creation
   const sideImage = createEl("img", "side-img");
   sideImage.alt =
     "A seared steak topped with fresh herbs and peppercorns, served with a dark glaze on a matte black plate.";
   sideImage.src = sideBarImage;
-  sideContainer.appendChild(sideImage);
+  sideContainer.append(sideImage);
 
   // Announcement Text
   const announcement = createEl(
@@ -63,13 +63,13 @@ const buildHomeSection = () => {
     "announcement-text",
     "✨ Open for Weekend Brunch | 11 AM - 3 PM",
   );
-  sideContainer.appendChild(announcement);
+  sideContainer.append(announcement);
 
   // Star Image Creation
   const stars = createEl("img", "stars-img");
   stars.src = starImage;
   stars.alt = "A yellow 5-star icon";
-  ratingContainer.appendChild(stars);
+  ratingContainer.append(stars);
 
   return mainDiv;
 };
