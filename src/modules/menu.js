@@ -8,6 +8,9 @@ import foodImage6 from "../assets/images/food-dishes/food-6.jpg";
 import leftSidebarImg from "../assets/images/menu-section-left-panel-img.png";
 import rightSidebarImg from "../assets/images/menu-section-right-panel-img.png";
 
+// DOM helper function
+import { createEl } from "../utils/dom";
+
 // Dishes data
 const dishesData = [
   {

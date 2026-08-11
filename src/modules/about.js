@@ -1,6 +1,9 @@
 // Import images
 import footerImage from "../assets/images/about-us-card-footer.png";
 
+// DOM helper function
+import { createEl } from "../utils/dom";
+
 // About Data
 const aboutData = [
   {
