@@ -102,6 +102,7 @@ const buildAboutSection = () => {
   const footer = document.createElement("img");
   footer.classList.add("card-footer-img");
   footer.src = footerImage;
+  footer.alt = "A dark, textured banner featuring the words 'OBSIDIAN PLATES RESTAURANT' in elegant gold lettering. Centered above the text is a matching gold logo depicting a stylized, geometric plate next to a fork and knife.";
   footerContainer.appendChild(footer);
 
   restaurantDetails.append(

@@ -54,6 +54,7 @@ const buildHomeSection = () => {
   // Side Image Creation
   const sideImage = document.createElement("img");
   sideImage.classList.add("side-img");
+  sideImage.alt = "A seared steak topped with fresh herbs and peppercorns, served with a dark glaze on a matte black plate.";
   sideImage.src = sideBarImage;
   sideContainer.appendChild(sideImage);
 
@@ -66,6 +67,7 @@ const buildHomeSection = () => {
   // Star Image Creation
   const stars = document.createElement("img");
   stars.src = starImage;
+  stars.alt = "A yellow 5-star icon";
   stars.classList.add("stars-img");
   ratingContainer.appendChild(stars);
 
