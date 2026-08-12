@@ -34,69 +34,75 @@ const aboutData = {
 };
 
 const buildAboutSection = () => {
-  const aboutDiv = createEl("div", "about-container");
+  const aboutDiv = createEl("div", { cls: "about-container" });
 
   // About section title
-  const aboutPageTitle = createEl("h2", "about-page-title", "About Us");
+  const aboutPageTitle = createEl("h2", {
+    cls: "about-page-title",
+    text: "About Us",
+  });
   aboutDiv.append(aboutPageTitle);
 
   // About Us Card
-  const card = createEl("article", "about-us-card");
+  const card = createEl("article", { cls: "about-us-card" });
   aboutDiv.append(card);
 
   // Our Restaurant
-  const restaurantDetails = createEl("div", "about-our-restaurant-container");
+  const restaurantDetails = createEl("div", {
+    cls: "about-our-restaurant-container",
+  });
 
   // Our Compromise
-  const compromiseContainer = createEl("div", "compromise-container");
-  const compromiseHeading = createEl("h3", null, "Our Compromise");
+  const compromiseContainer = createEl("div", { cls: "compromise-container" });
+  const compromiseHeading = createEl("h3", { text: "Our Compromise" });
   const compromiseFrag = document.createDocumentFragment();
   aboutData.compromiseText.forEach((text) => {
-    const p = createEl("p", null, text);
+    const p = createEl("p", { attrs: { text: text } });
     compromiseFrag.append(p);
   });
   compromiseContainer.append(compromiseHeading, compromiseFrag);
 
   // Our team
-  const teamContainer = createEl("div", "team-container");
-  const teamHeading = createEl("h3", null, "The Artisans of Obsidian");
+  const teamContainer = createEl("div", { cls: "team-container" });
+  const teamHeading = createEl("h3", { text: "The Artisans of Obsidian" });
   const teamFrag = document.createDocumentFragment();
   aboutData.teamText.forEach((text) => {
-    const p = createEl("p", null, text);
+    const p = createEl("p", { text: text });
     teamFrag.append(p);
   });
   teamContainer.append(teamHeading, teamFrag);
 
   // Contacts
-  const contactsContainer = createEl("div", "contacts-container");
-  const contactsHeading = createEl("h3", null, "How to reach us");
+  const contactsContainer = createEl("div", { cls: "contacts-container" });
+  const contactsHeading = createEl("h3", { text: "How to reach us" });
   const contacts = createEl("ul");
   // Contact information
   const contactsFrag = document.createDocumentFragment();
   aboutData.contacts.forEach((info) => {
-    const el = createEl("li", null, info);
+    const el = createEl("li", { text: info });
     contactsFrag.append(el);
   });
   contacts.append(contactsFrag);
   contactsContainer.append(contactsHeading, contacts);
 
   // Schedule
-  const scheduleContainer = createEl("div", "schedule-container");
-  const scheduleHeading = createEl("h3", null, "Business Hours");
+  const scheduleContainer = createEl("div", { cls: "schedule-container" });
+  const scheduleHeading = createEl("h3", { text: "Business Hours" });
   const scheduleHours = createEl("ul");
   const scheduleFrag = document.createDocumentFragment();
   aboutData.schedules.forEach((schedule) => {
-    const el = createEl("li", null, schedule);
+    const el = createEl("li", { text: schedule });
     scheduleFrag.append(el);
   });
   scheduleHours.append(scheduleFrag);
   scheduleContainer.append(scheduleHeading, scheduleHours);
 
   // Footer
-  const footerContainer = createEl("footer", "footer-container");
-  const footer = createEl("img", "card-footer-img");
-  footer.src = footerImage;
-  footer.alt = aboutData.footerAlt;
+  const footerContainer = createEl("footer", { cls: "footer-container" });
+  const footer = createEl("img", {
+    cls: "card-footer-img",
+    attrs: { alt: aboutData.footerAlt, src: footerImage },
+  });
   footerContainer.append(footer);
 
   restaurantDetails.append(
