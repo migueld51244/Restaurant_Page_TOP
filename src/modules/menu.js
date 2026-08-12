@@ -66,66 +66,80 @@ const menuData = [
 ];
 
 const buildMenuSection = () => {
-  const menuDiv = createEl("div", "menu-container");
+  const menuDiv = createEl("div", { cls: "menu-container" });
 
   // Data container
-  const dataContainer = createEl("div", "data-container");
+  const dataContainer = createEl("div", { cls: "data-container" });
   menuDiv.append(dataContainer);
 
   // Section Title
-  const title = createEl("h2", "menu-page-title", "Our great menu");
+  const title = createEl("h2", {
+    cls: "menu-page-title",
+    text: "Our great menu",
+  });
   dataContainer.append(title);
 
   // Section images
-  const leftImage = createEl("img", "left-side-img");
-  leftImage.src = leftSidebarImg;
-  leftImage.alt = menuData[1].leftSidebarImgAlt;
-  const rightImage = createEl("img", "right-side-img");
-  rightImage.src = rightSidebarImg;
-  rightImage.alt = menuData[1].rightSidebarImgAlt;
+  const leftImage = createEl("img", {
+    cls: "left-side-img",
+    attrs: { alt: menuData[1].leftSidebarImgAlt, src: leftSidebarImg },
+  });
+
+  const rightImage = createEl("img", {
+    cls: "right-side-img",
+    attrs: { alt: menuData[1].rightSidebarImgAlt, src: rightSidebarImg },
+  });
 
   dataContainer.append(leftImage, rightImage);
 
   // Section description
-  const description = createEl(
-    "h3",
-    "menu-page-desc",
-    "Come hungry, leave happy. Check out our favorites below.",
-  );
+  const description = createEl("h3", {
+    cls: "menu-page-desc",
+    text: "Come hungry, leave happy. Check out our favorites below.",
+  });
   dataContainer.append(description);
 
   // Food Section Container
-  const foodContainer = createEl("main", "food-section");
+  const foodContainer = createEl("main", { cls: "food-section" });
   menuDiv.append(foodContainer);
 
   // Food Section Title
-  const foodTitle = createEl("h3", "food-section-title", "Tasty dishes");
+  const foodTitle = createEl("h3", {
+    cls: "food-section-title",
+    text: "Tasty dishes",
+  });
   foodContainer.append(foodTitle);
 
   // Dishes container
-  const dishesContainer = createEl("div", "dishes-container");
+  const dishesContainer = createEl("div", { cls: "dishes-container" });
   foodContainer.append(dishesContainer);
 
   // Container for each dish
   menuData[0].forEach((dish) => {
-    const item = createEl("div", "dish-item");
+    const item = createEl("div", { cls: "dish-item" });
     dishesContainer.append(item);
 
-    const dishImg = createEl("img", "dish-image");
-    dishImg.src = dish.img;
-    dishImg.alt = dish.alt;
-    dishImg.draggable = false;
+    const dishImg = createEl("img", {
+      cls: "dish-image",
+      attrs: { alt: dish.alt, src: dish.img, draggable: false },
+    });
 
-    const dishName = createEl("h4", "dish-name", dish.name);
+    const dishName = createEl("h4", { cls: "dish-name", text: dish.name });
 
-    const dishDescription = createEl("p", "dish-description", dish.desc);
+    const dishDescription = createEl("p", {
+      cls: "dish-description",
+      text: dish.desc,
+    });
 
-    const dishPrice = createEl("p", "dish-price", dish.price);
+    const dishPrice = createEl("p", { cls: "dish-price", text: dish.price });
     item.append(dishImg, dishName, dishDescription, dishPrice);
   });
 
   // Section footer
-  const footer = createEl("p", "footer", "Obsidian Plates Restaurant - 2026");
+  const footer = createEl("p", {
+    cls: "footer",
+    text: "Obsidian Plates Restaurant - 2026",
+  });
 
   foodContainer.append(footer);
 
