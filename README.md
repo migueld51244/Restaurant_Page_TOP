@@ -1,5 +1,3 @@
-content = """# Restaurant Page TOP
-
 A modern single-page restaurant website built for The Odin Project using vanilla JavaScript, Webpack, and modular DOM rendering.
 
 ## Overview
