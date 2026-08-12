@@ -57,7 +57,7 @@ const buildAboutSection = () => {
   const compromiseHeading = createEl("h3", { text: "Our Compromise" });
   const compromiseFrag = document.createDocumentFragment();
   aboutData.compromiseText.forEach((text) => {
-    const p = createEl("p", { attrs: { text: text } });
+    const p = createEl("p", { text: text });
     compromiseFrag.append(p);
   });
   compromiseContainer.append(compromiseHeading, compromiseFrag);
